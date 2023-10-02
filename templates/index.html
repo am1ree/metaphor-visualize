@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Internet search visualizer - Powered by Metaphor.so</title>
+</head>
+<body>
+    <h1>Internet search visualizer - Powered by Metaphor.so 🏞️ 👨‍🎨 🎨</h1>
+    <form method="POST">
+        <label for="query">Enter your query:</label>
+        <input type="text" id="query" name="query" required style="width: 800px;">
+        <button type="submit">Generate Image</button>
+    </form>
+    
+    {% if image_url %}
+    <h2>Generated Prompt:</h2>
+    <p>{{ image_prompt }}</p>
+
+    <h2>Generated Image:</h2>
+    <img src="{{ image_url }}" alt="Generated Image">
+    {% endif %}
+</body>
+</html>
